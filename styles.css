@@ -1,0 +1,185 @@
+/* COLOURS 
+
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Component layout */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  align-items: center;
+  gap: 10rem;
+  flex-direction: column;
+  background-color: #c5e4e7;
+}
+
+h1 {
+  margin-top: 5rem;
+  font-family: "space Mono", monospace;
+  color: #3d6666;
+  letter-spacing: 5px;
+}
+
+.calculator {
+  width: 92rem;
+  height: 50rem;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+}
+
+.calculator_input {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.calculator_result {
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #00494d;
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+}
+
+/* creating the form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 5rem;
+}
+.bill_label {
+  font-family: "Space Mono", monospace;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #5e7a7d; /* Set the label color */
+}
+
+.form_input {
+  width: 98%;
+  height: 5rem;
+  border-radius: 5px;
+  border: none;
+  padding: 1rem;
+
+  font-size: 2rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: #3d6666;
+  background-color: #f3f9fa;
+  text-align: right;
+}
+
+.tip-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align the buttons to the left within the column */
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.button-row {
+  display: flex;
+  align-items: center; /* Align buttons vertically in a row */
+  margin-bottom: 10px; /* Add margin between the rows */
+}
+
+.tip-button {
+  width: 12rem;
+  height: 4rem;
+  background-color: #3d6666;
+  color: white;
+  border: none;
+  padding: 1rem;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  font-size: 2.4rem;
+}
+
+.tip-button-green {
+  background-color: #26c2ae;
+}
+
+.tip-button-grey {
+  background-color: #f3f9fa;
+  color: #3d6666;
+}
+
+/* tip result data */
+
+.calc_data {
+  padding-top: 4rem;
+  padding-left: 1rem;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8rem;
+}
+
+.tip-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.category {
+  color: hsl(185, 41%, 84%);
+  font-weight: 400;
+}
+
+.calc_data_result {
+  font-size: 4rem;
+  color: #26c2ae;
+}
+.reset-button {
+  width: 80%;
+  align-self: center;
+  height: 5rem;
+  background-color: #26c2ae;
+  color: #3d6666;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Space Mono", monospace;
+  font-size: 2.4rem;
+  font-weight: 700;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      ls
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>SPLI<br />TTER</h1>
+
+      <div class="calculator">
+        <div class="calculator_input">
+          <form>
+            <div class="form-group">
+              <label class="bill_label" for="bill">Bill</label><br />
+              <input
+                class="form_input"
+                type="text"
+                id="bill"
+                name="bill"
+                placeholder="0.00"
+              />
+            </div>
+            <div class="form-group">
+              <label class="bill_label" for="select-tip">Select Tip %</label>
+              <div class="tip-buttons">
+                <div class="button-row">
+                  <!-- Predefined tip percentage buttons for the first row -->
+                  <button type="button" class="tip-button" value="5">5%</button>
+                  <button type="button" class="tip-button" value="10">
+                    10%
+                  </button>
+                  <button
+                    type="button"
+                    class="tip-button tip-button-green"
+                    value="15"
+                  >
+                    15%
+                  </button>
+                </div>
+                <div class="button-row">
+                  <!-- Predefined tip percentage buttons for the second row -->
+                  <button type="button" class="tip-button" value="25">
+                    25%
+                  </button>
+                  <button type="button" class="tip-button" value="50">
+                    50%
+                  </button>
+                  <button
+                    type="button"
+                    class="tip-button tip-button-grey"
+                    value="custom"
+                    onclick="toggleCustomInput()"
+                  >
+                    custom
+                  </button>
+                  <!-- Add the custom input element here -->
+                  <input
+                    type="text"
+                    id="customTipInput"
+                    class="form_input"
+                    style="display: none"
+                  />
+                </div>
+              </div>
+              <label class="bill_label" for="numberOfPeople"
+                >Number of People</label
+              ><br />
+              <input
+                class="form_input"
+                type="text"
+                id="numberOfPeople"
+                name="numberOfPeople"
+                placeholder="0"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="calculator_result">
+          <div class="calc_data">
+            <div class="tip-data">
+              <p>
+                Tip Amount <br />
+                <span class="category">/person</span>
+              </p>
+              <p id="tip_per_person" class="calc_data_result">$0.00</p>
+            </div>
+            <div class="tip-data">
+              <p>
+                Total <br />
+                <span class="category">/person</span>
+              </p>
+              <p id="total" class="calc_data_result">$0.00</p>
+            </div>
+          </div>
+          <button class="reset-button">RESET</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
