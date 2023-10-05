@@ -52,5 +52,18 @@ bill.addEventListener("input", calculateTip);
 people.addEventListener("input", calculateTip);
 customTipInput.addEventListener("input", calculateTip);
 
+function resetCalculator() {
+  bill.value = "";
+  people.value = "";
+  customTipInput.value = "";
+  tipPerPerson.textContent = "$0.00";
+  total.textContent = "$0.00";
+  tipButtons.forEach((button) => button.classList.remove("active"));
+}
+
+// Add an event listener to the reset button
+const resetButton = document.querySelector(".reset-button");
+resetButton.addEventListener("click", resetCalculator);
+
 // Initial calculation when the page loads
 calculateTip();
