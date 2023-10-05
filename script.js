@@ -65,5 +65,18 @@ customTipInput.addEventListener("input", () => {
   total.textContent = `$${totalPerPerson.toFixed(2)}`;
 });
 
+// Function to reset all input fields and results
+function resetCalculator() {
+  bill.value = "";
+  people.value = "";
+  customTipInput.value = "";
+  tipPerPerson.textContent = "$0.00";
+  total.textContent = "$0.00";
+  tipButtons.forEach((button) => button.classList.remove("active"));
+}
+
+// Add an event listener to the reset button
+const resetButton = document.querySelector(".reset-button");
+resetButton.addEventListener("click", resetCalculator);
 // Initial calculation when the page loads
 calculateTip();
