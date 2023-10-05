@@ -133,6 +133,38 @@ h1 {
   font-size: 2.4rem;
 }
 
+/* Custom tip input field */
+.custom-tip-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px; /* Add margin to match the other buttons */
+}
+
+.custom-tip-input label {
+  font-family: "Space Mono", monospace;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #5e7a7d; /* Set the label color */
+  margin-bottom: 5px; /* Add margin below the label */
+}
+
+.custom-tip-input input {
+  width: 12rem;
+  height: 4rem;
+  background-color: #f3f9fa;
+  color: #3d6666;
+  border: none;
+  padding: 0; /* Adjust padding to 0 to remove extra spacing */
+  margin: 0 5px; /* Add margin to match the other buttons */
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 2.4rem;
+  text-align: center;
+  /* Add more styles as needed */
+}
+
 .tip-button-green {
   background-color: #26c2ae;
 }

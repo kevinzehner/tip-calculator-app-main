@@ -68,21 +68,18 @@
                   <button type="button" class="tip-button" value="50">
                     50%
                   </button>
-                  <button
-                    type="button"
-                    class="tip-button tip-button-grey"
-                    value="custom"
-                    onclick="toggleCustomInput()"
-                  >
-                    custom
-                  </button>
-                  <!-- Add the custom input element here -->
-                  <input
-                    type="text"
-                    id="customTipInput"
-                    class="form_input"
-                    style="display: none"
-                  />
+
+                  <!-- Custom tip input field -->
+                  <div class="custom-tip-input">
+                    <label class="bill_label" for="customTip"></label><br />
+                    <input
+                      class="form_input"
+                      type="text"
+                      id="customTip"
+                      name="customTip"
+                      placeholder="custom"
+                    />
+                  </div>
                 </div>
               </div>
               <label class="bill_label" for="numberOfPeople"
